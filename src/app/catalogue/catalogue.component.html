@@ -1,0 +1,19 @@
+<div class="grid-container">
+    <!--  Product list -->
+    <mat-card>
+      <mat-card-content>
+          <mat-selection-list #itemsInCart>
+            <mat-list-option (click)=addRemove($event) *ngFor="let item of items">
+              <h3 matLine> {{item.title | titleCase }} </h3>
+              <p matLine>
+                <span>{{item.price | currency:'INR'}}</span>
+                <span><mat-chip-list>
+                    <mat-chip color="accent">{{item.category}}</mat-chip>
+                </mat-chip-list></span>
+              </p>
+            </mat-list-option>
+          </mat-selection-list>
+      </mat-card-content>
+    </mat-card>
+    <!-- /Product list -->
+</div>

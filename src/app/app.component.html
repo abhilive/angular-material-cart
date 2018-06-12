@@ -1,0 +1,16 @@
+<div class="app-content">
+    <!--<navigation></navigation>-->
+    <mat-toolbar color="primary">
+        <span>Demo Cart</span>
+        <!-- This fills the remaining space of the current row -->
+        <span class="fill-space"></span>
+        <span><a mat-button routerLink="/catalogue">Catalogue</a></span>
+        <span (fakeFunc)="printSum($event)">
+          <button mat-raised-button color="primary"
+          matBadge="{{agreed}}" matBadgePosition="after" matBadgeColor="accent">
+        Cart
+          </button>
+        </span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</div>
